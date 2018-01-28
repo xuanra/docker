@@ -1,0 +1,11 @@
+<ROOT>
+	<CONNECTOR>
+	<CLASS>sisnet.memory.redis.connector.JedisConnector</CLASS>
+		<PARAMS>
+			<ADDRESS>__REDISCACHE__.redis.cache.windows.net:6380</ADDRESS> 
+			<CONNECTIONTIMEOUT>1000</CONNECTIONTIMEOUT>
+			<PASSWORD>__REDISCACHEPASSWORD__</PASSWORD>
+			<SWSSL>S</SWSSL>
+		</PARAMS>
+	</CONNECTOR>
+</ROOT>

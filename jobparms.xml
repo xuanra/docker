@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<ROOT>
+	<!-- Si el grupo de parametros PARAMETROSBASE no viene informado, se usa 
+		de base el valor de PATHFICO de sisnet.xml -->
+	<!--<PARAMETROSBASE> -->
+	<!-- <DIRDBASE>X:\\WorkSISnet\\AYAX</DIRDBASE> --> 
+	<!-- <DIRDBASE>/home/usuario/WorkSISnet/AYAX</DIRDBASE> -->
+	<!-- </PARAMETROSBASE> -->
+	<JOBPARAMS>
+		<JOB>
+			<JOBNAME>JOBINFCO</JOBNAME>
+			<!-- Carpeta donde se depositan los ficheros de procesados de Polizas 
+				colectivas. -->
+			<PARAM01>$DIRDBASE\\INFORME_POLIZAS_COLECTIVAS</PARAM01>
+			<!-- Extensión de los ficheros generados -->
+			<PARAM02>.csv</PARAM02>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBSEPA1</JOBNAME>
+			<!-- directorio output -->
+			<PARAM01>$DIRDBASE/Output/Recibos/Envio/Pendientes</PARAM01>
+			<PARAM02>30</PARAM02>
+			<PARAM04>XML</PARAM04>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBSEPA2</JOBNAME>
+			<!-- directorio origen local -->
+			<PARAM01>$DIRDBASE/Output/Recibos/Devoluciones/Pendientes</PARAM01>
+			<!-- directorio procesados local -->
+			<PARAM02>$DIRDBASE/Output/Recibos/Devoluciones/Procesados</PARAM02>
+			<!-- servidor de sftp -->
+			<PARAM03>SFTPASISA</PARAM03>
+			<!-- directorio origen remoto -->
+			<PARAM04>/POLIZAS/Integracion/Bancos/Norma19/Devoluciones</PARAM04>
+			<!-- directorio procesados remoto -->
+			<PARAM05>/POLIZAS/Integracion/Bancos/Norma19/Devoluciones/Procesados</PARAM05>
+			<!-- nombre del fichero a procesar -->
+			<PARAM06>_DEV</PARAM06>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBSEPA3</JOBNAME>
+			<!-- directorio output -->
+			<PARAM01>$DIRDBASE/Output/Recibos/Envio/Pendientes</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBSEPA5</JOBNAME>
+			<!-- directorio output -->
+			<PARAM01>$DIRDBASE/Output/Mediadores/Envio/Pendientes</PARAM01>
+			<PARAM02>30</PARAM02>
+			<PARAM04>XML</PARAM04>
+			<PARAM06>SEPA19ME</PARAM06>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBSEPA6</JOBNAME>
+			<!-- directorio output -->
+			<PARAM01>$DIRDBASE/Output/SEPA/Transferencias/Extornos</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBSEPA7</JOBNAME>
+			<!-- directorio output -->
+			<PARAM01>$DIRDBASE/Output/SEPA/Transferencias/Siniestros</PARAM01>
+			<PARAM02>XML</PARAM02>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBSEPA8</JOBNAME>
+			<!-- directorio output -->
+			<PARAM01>$DIRDBASE/Output/SEPA/Transferencias/Mediadores</PARAM01>
+			<PARAM02>XML</PARAM02>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBPCOMI</JOBNAME>
+			<!-- fecha incio cia -->
+			<PARAM01>01/10/2015</PARAM01>
+			<!-- proceso menusual -->
+			<PARAM02>N</PARAM02>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBMOROS</JOBNAME>
+			<!-- directorio output -->
+			<PARAM01>$DIRDBASE/Output/Impagos</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBPIMPA</JOBNAME>
+			<!-- directorio output -->
+			<PARAM01>$DIRDBASE/Output/CartasPago</PARAM01>
+		</JOB>
+
+		<JOB>
+			<!-- Job de Migración (o carga) de Pólizas -->
+			<JOBNAME>JOBMIPOL</JOBNAME>
+			<!-- Carpeta donde se depositan los ficheros a cargar. -->
+			<PARAM01>$DIRDBASE/Jobs/Cargas/Polizas</PARAM01>
+			<!-- Carpeta donde se generan los ficheros Procesados. -->
+			<PARAM02>$DIRDBASE/Jobs/Cargas/Polizas/Procesados</PARAM02>
+			<!-- Carpeta donde se generan los ficheros de error. -->
+			<PARAM03>$DIRDBASE/Jobs/Cargas/Polizas/Error</PARAM03>
+			<PARAM04></PARAM04>
+			<PARAM05>N</PARAM05>
+			<PARAM06></PARAM06>
+		</JOB>  
+		
+		<JOB>
+			<!-- Job de Migración (o carga) de Recibos -->
+			<JOBNAME>JOBMIREC</JOBNAME>
+			<!-- Carpeta donde se depositan los ficheros a cargar. -->
+			<PARAM01>$DIRDBASE/Jobs/Cargas/Recibos</PARAM01>
+			<!-- Carpeta donde se generan los ficheros Procesados. -->
+			<PARAM02>$DIRDBASE/Jobs/Cargas/Recibos/Procesados</PARAM02>
+			<!-- Carpeta donde se generan los ficheros de error. -->
+			<PARAM03>$DIRDBASE/Jobs/Cargas/Recibos/Error</PARAM03>
+			<PARAM04></PARAM04>
+			<PARAM05>N</PARAM05>
+			<PARAM06></PARAM06>
+		</JOB> 		
+
+		<JOB>
+			<!-- Job de Migración (o carga) de Agentes -->
+			<JOBNAME>JOBMIAGE</JOBNAME>
+			<!-- Carpeta donde se depositan los ficheros a cargar. -->
+			<PARAM01>$DIRDBASE/Jobs/Cargas/Agentes</PARAM01>
+			<!-- Carpeta donde se generan los ficheros Procesados. -->
+			<PARAM02>$DIRDBASE/Jobs/Cargas/Agentes/Procesados</PARAM02>
+			<!-- Carpeta donde se generan los ficheros de error. -->
+			<PARAM03>$DIRDBASE/Jobs/Cargas/Agentes/Error</PARAM03>
+			<PARAM04></PARAM04>
+			<PARAM05>N</PARAM05>
+			<PARAM06></PARAM06>
+		</JOB>
+		<JOB>
+			<!-- Job de Migración (o carga) de Reaseguro -->
+			<JOBNAME>JOBMIREA</JOBNAME>
+			<!-- Carpeta donde se depositan los ficheros a cargar. -->
+			<PARAM01>$DIRDBASE/Jobs/Cargas/Reaseguro</PARAM01>
+			<!-- Carpeta donde se generan los ficheros Procesados. -->
+			<PARAM02>$DIRDBASE/Jobs/Cargas/Reaseguro/Procesados</PARAM02>
+			<!-- Carpeta donde se generan los ficheros de error. -->
+			<PARAM03>$DIRDBASE/Jobs/Cargas/Reaseguro/Error</PARAM03>
+			<PARAM04></PARAM04>
+			<PARAM05>N</PARAM05>
+			<PARAM06></PARAM06>
+		</JOB>  
+		<JOB>
+			<JOBNAME>JOBDCONT</JOBNAME>
+			<!-- máximo días -->
+			<PARAM01>30</PARAM01>
+			<!-- fecha inicio cia -->
+			<PARAM02>01/01/2015</PARAM02>
+		 	<!-- Indicador concurrencia -->
+			<PARAM03>15</PARAM03>
+		</JOB>
+		<JOB>
+		 	<JOBNAME>JOBICASI</JOBNAME>
+		 	<!-- directorio output -->
+		 	<PARAM01>$DIRDBASE/Output/Contabilidad</PARAM01>
+			<!-- fecha inicio cia -->
+			<PARAM02>01/10/2015</PARAM02>
+		</JOB>
+		<JOB>
+		 	<JOBNAME>JOBICSAP</JOBNAME>
+		 	<!-- directorio output -->
+ 		 	<PARAM01>$DIRDBASE/Output/Contabilidad</PARAM01>
+			<!-- fecha inicio cia -->
+			<PARAM02>01/10/2015</PARAM02>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBFILWM</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output</PARAM01>
+			<!-- fecha inicio cia -->
+			<PARAM02>01/01/2015</PARAM02>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBDFILE</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBDFILE1</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBDFILE2</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBDFILE3</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBDFILE4</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBDFILE5</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBFILTJ</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output</PARAM01>
+		</JOB>
+		<JOB>
+			<!-- Job de Cargas generales de riesgos -->
+			<JOBNAME>JOBCASEG</JOBNAME>
+			<!-- Carpeta donde se deposita el fichero de correctos. -->
+			<PARAM01>$DIRDBASE/#IDJOB/Correctos</PARAM01>
+			<!-- Carpeta donde se deposita el fichero de errores. -->
+			<PARAM02>$DIRDBASE/#IDJOB/Errores</PARAM02>
+			<!-- Carpeta donde se deposita el fichero con la lista de errores. -->
+			<PARAM03>$DIRDBASE/#IDJOB/Lista_Errores</PARAM03>
+			<!-- servidor de sftp -->
+			<PARAM04>SFTPASISA</PARAM04>
+			<!-- directorios remoto -->
+			<PARAM05>/POLIZAS/Integracion/PMasivos</PARAM05>
+			<!-- directorios remoto procesados-->
+			<PARAM06>/POLIZAS/Integracion/PMasivos/procesados</PARAM06>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBENNOT</JOBNAME>
+		 	<!-- ruta salida -->
+ 		 	<PARAM01>$DIRDBASE/Temp</PARAM01>
+			<!-- servidor de sftp -->
+			<PARAM02>SFTPASISA</PARAM02>
+			<!-- directorios remoto -->
+			<PARAM03>/POLIZAS/Integracion/Registro DGJ</PARAM03>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBRCEDI</JOBNAME>
+		 	<!-- Indicador concurrencia -->
+			<PARAM01>5</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBPOLVI</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBINFPOVM</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBRECIB</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBINCON</JOBNAME>
+			<!-- directorio output -->
+			<PARAM01>$DIRDBASE/Output/Contabilidad/InformesCsv</PARAM01>
+			<PARAM02>SFTPASISA</PARAM02>
+			<PARAM03>/POLIZAS/Informes</PARAM03>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBPOLAM</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output</PARAM01>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBPO347</JOBNAME>
+		 	<!-- directorio tmp -->
+ 		 	<PARAM01>$DIRDBASE/Output/Modelo347Polizas</PARAM01>
+		</JOB>
+				<JOB>
+			<!-- Job de Cargas generales de riesgos -->
+			<JOBNAME>JOBAPLIM</JOBNAME>
+			<!-- Carpeta donde se deposita el fichero de correctos. -->
+			<PARAM01>$DIRDBASE/Jobs/JOAPLIM/Correctos/</PARAM01>
+			<!-- Carpeta donde se deposita el fichero de errores. -->
+			<PARAM02>$DIRDBASE/Jobs/JOAPLIM/Errores/</PARAM02>
+			<!-- Ruta para invocar al WebService -->
+			<PARAM03>https://__WEBSITE1__.azurewebsites.net/sisnet/WSSISNet</PARAM03>
+			<!-- servidor de sftp -->
+			<PARAM04>SFTPASISA</PARAM04>
+			<!-- Logs de ejecucion -->
+			<PARAM05>$DIRDBASE/Jobs/JOAPLIM/Logs/</PARAM05>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBMSIMU</JOBNAME>
+			<PARAM01>$DIRDBASE/Simulaciones/Entrada/</PARAM01>
+			<PARAM02>$DIRDBASE/Simulaciones/Salida/</PARAM02>
+		</JOB>
+		<JOB>
+			<JOBNAME>JOBASPADM</JOBNAME>
+			<!-- Directorio fichero generado -->
+			<PARAM01>\\ftp.asisa.es\ftp$\SISNET\POLIZAS\Integracion\Mascotas</PARAM01>
+		</JOB>
+		
+		<JOB>
+			<!-- Job generación informes dinámicos -->
+			<JOBNAME>JINFODIN</JOBNAME>
+			<!-- servidor de sftp -->
+			<PARAM01>SFTPASISA</PARAM01>
+			<!-- ruta ficheros FTP-->
+			<PARAM02>/POLIZAS/Integracion/Recibos</PARAM02>
+			<!-- número meses diferencia -->
+			<PARAM03>1</PARAM03>
+			<!-- día del mes -->
+			<PARAM04>19</PARAM04>
+		</JOB>
+		<JOB>
+			<!-- Job carga datos rappel mediadores -->
+			<JOBNAME>JRAPCADA</JOBNAME>
+			<!-- servidor de sftp -->
+			<PARAM01>SFTPASISA</PARAM01>
+			<!-- ruta ficheros FTP-->
+			<PARAM02>/POLIZAS/Integracion/Mediadores/Rappel</PARAM02>
+			<!-- local path -->
+			<PARAM03>$DIRDBASE/Output/Rappel</PARAM03>
+			<!-- fecha inicio cia -->
+			<PARAM04>01/01/2015</PARAM04>
+		</JOB>
+		
+	</JOBPARAMS>
+</ROOT>

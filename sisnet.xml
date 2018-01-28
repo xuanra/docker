@@ -1,0 +1,33 @@
+<ROOT>
+    <PROPIEDADES_CONTEXTO>
+        <CONNDATA>
+            <USERDATABASE>__USERDATABASE__</USERDATABASE>
+            <PASSDATABASE>__PASSWORDDATABASE__</PASSDATABASE>
+            <URLDATABASE>__CONNECTIONSTRING__</URLDATABASE>
+            <ESQUEMA>__SCHEMA__</ESQUEMA>
+            <OWNERRULES>__SCHEMA__</OWNERRULES>
+            <OWNERUSERS>__SCHEMA__</OWNERUSERS>
+            <OWNERSRC>__SCHEMA__</OWNERSRC>
+            <OWNERSTREET>__SCHEMA__</OWNERSTREET>
+            <OWNERDWH>__SCHEMA__</OWNERDWH>
+            <PATHFICO>D:/home/site/WorkSISnet/Asisa</PATHFICO>
+            <PATHMEDI>D:/home/site/WorkSISnet/Asisa/Ficheros/FicherosMediadores</PATHMEDI>
+            <PATHDATATOOLS></PATHDATATOOLS>
+            <IPFALSA>192.168.1.200</IPFALSA>
+            <INTLOCAL>S</INTLOCAL>
+            <TIPODINST>SSCC</TIPODINST>
+            <APPSISNET>__WEBSITE1__</APPSISNET>
+            <SWCLUSTER>N</SWCLUSTER>
+            <DIRDLOGS>D:/home/site/WorkSISnet/Asisa</DIRDLOGS>
+            <CTXTOMCAT>sisnet</CTXTOMCAT>
+            <CIAASCOD>0001</CIAASCOD>
+            <VISUAL>/custom_visual/asisa</VISUAL>
+            <DRIVERCONN>com.microsoft.sqlserver.jdbc.SQLServerDriver</DRIVERCONN>
+	        <SWALTDIS>S</SWALTDIS>
+	        <SWAAD>S</SWAAD>
+        </CONNDATA>
+        <SERVINET>
+            <TIPOMENSAJERIA>N</TIPOMENSAJERIA>
+        </SERVINET>
+    </PROPIEDADES_CONTEXTO>
+</ROOT>      
